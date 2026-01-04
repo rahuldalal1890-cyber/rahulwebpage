@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Thermometer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="app">
+    <h1>🌡️ Smart Thermometer</h1>
+    <p class="subtitle">Real-time temperature monitoring</p>
+
+    <div class="thermo-card">
+      <p class="label">Temperature (°C)</p>
+
+      <input 
+        type="range" 
+        min="-10" 
+        max="50" 
+        value="20" 
+        id="tempRange"
+      >
+
+      <div id="temperature" class="temperature">20°C</div>
+      <div id="status" class="status normal">Normal</div>
+
+      <!-- City Selector -->
+      <select id="citySelect">
+        <option value="Vilnius">Vilnius (Lithuania)</option>
+        <option value="London">London (UK)</option>
+        <option value="New York">New York (USA)</option>
+        <option value="Tokyo">Tokyo (Japan)</option>
+        <option value="Delhi">Delhi (India)</option>
+      </select>
+
+      <button id="liveBtn">Get Live Weather</button>
+    </div>
+
+    <!-- Weather Table -->
+    <table>
+      <tr>
+        <th>Day</th>
+        <th>Weather</th>
+        <th>Temp</th>
+      </tr>
+      <tr><td>Mon</td><td>☀️ Sunny</td><td>25°C</td></tr>
+      <tr><td>Tue</td><td>🌤 Partly Cloudy</td><td>22°C</td></tr>
+      <tr><td>Wed</td><td>☁️ Cloudy</td><td>18°C</td></tr>
+      <tr><td>Thu</td><td>🌧 Rainy</td><td>16°C</td></tr>
+      <tr><td>Fri</td><td>⛈ Thunderstorm</td><td>20°C</td></tr>
+      <tr><td>Sat</td><td>❄️ Snow</td><td>-2°C</td></tr>
+      <tr><td>Sun</td><td>🌈 Mixed</td><td>21°C</td></tr>
+    </table>
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.app {
+  background: #fff;
+  width: 380px;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.thermo-card {
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.label {
+  font-weight: 600;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.temperature {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.status {
+  font-weight: 600;
+  padding: 8px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.cold { background: #74ebd5; color: #004d40; }
+.normal { background: #a8ff78; color: #2e7d32; }
+.hot { background: #ff9a9e; color: #b71c1c; }
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background: #667eea;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5a6de0;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f6d365, #fda085);
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+}
+
+th {
+  background: rgba(0,0,0,0.2);
+}
+
+tr:nth-child(even) {
+  background: rgba(255,255,255,0.1);
+}

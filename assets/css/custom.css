@@ -2002,10 +2002,162 @@ textarea:focus {
     animation: winFade .4s ease-out;
 }
 
+@keyframes rainbowFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.results-card {
+    background: #e8f0ff;   /* light blue */
+    border: 2px solid #80aaff;
+    color: #003366;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 15px;
+    font-size: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,255,0.15);
+}
+.form-section-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 20px 0 10px;
+  color: var(--gold);
+}
+
+.green-slider::-webkit-slider-thumb {
+  background: #25d366;
+}
+
+.results-card {
+  background: rgba(0, 200, 255, 0.1);
+  border: 1px solid rgba(0, 200, 255, 0.3);
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+  color: #b3eaff;
+}
+/* ============================
+   🔥 RATING LABELS — MAKE RED
+   ============================ */
+.rating-label {
+  color: #ff4b4b !important;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+/* ============================
+   🔥 SLIDER (RED THEME)
+   ============================ */
+.red-slider::-webkit-slider-thumb {
+  background: #ff3b3b;
+}
+
+.red-slider::-webkit-slider-runnable-track {
+  background: linear-gradient(90deg, #ff9b9b, #ff4b4b);
+}
+
+/* Firefox support */
+.red-slider::-moz-range-thumb {
+  background: #ff3b3b;
+}
+
+.red-slider::-moz-range-track {
+  background: linear-gradient(90deg, #ff9b9b, #ff4b4b);
+}
+
+/* Display numbers in red */
+.rating-value {
+  color: #ff4b4b !important;
+  font-weight: bold;
+}
+/* ============================
+   🌿 FEEDBACK RESULTS CARD — BRIGHT GREEN THEME
+   ============================ */
+.results-card {
+    background: #d7ffe0 !important;   /* bright mint green */
+    border: 2px solid #5adf7b !important;  /* clear bright green border */
+    border-radius: 12px;
+    padding: 25px;
+    color: #1f7a39 !important;   /* darker readable green text */
+    font-size: 18px;
+    box-shadow: 0 0 12px rgba(90, 223, 123, 0.5); /* green glow */
+    margin-bottom: 20px;
+}
+
+/* Average rating line text should stay readable */
+#averageRating {
+    font-size: 19px;
+    font-weight: 600;
+    color: #1f7a39 !important;
+}
+/* WIN POPUP */
+.win-popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.win-box {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    padding: 30px 50px;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    animation: winFade .4s ease-out;
+}
+
 @keyframes winFade {
     from { opacity:0; transform: scale(0.8); }
     to   { opacity:1; transform: scale(1); }
 }
+/* ============================
+   SPINNING BAR
+   ============================ */
+
+  /* ===============================
+   CUSTOM PRELOADER — preloader
+================================ */
+
+#ppreloader {
+  position: fixed;
+  inset: 0;
+  background: #0f0f14;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+}
+
+#ppreloader .line {
+  width: 120px;
+  height: 6px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+#ppreloader .line::before {
+  content: "";
+  position: absolute;
+  left: -40%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #f7c873, transparent);
+  animation: loaderMove 1.2s ease-in-out infinite;
+}
+
+@keyframes loaderMove {
+  0%   { left: -40%; }
+  50%  { left: 50%; }
+  100% { left: 100%; }
+}
+
 
 
   
